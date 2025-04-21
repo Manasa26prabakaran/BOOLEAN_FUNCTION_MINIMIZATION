@@ -1,7 +1,7 @@
 
 # BOOLEAN_FUNCTION_MINIMIZATION
 ```
-Developed by: P Manasa
+Developed by: P MANASA
 
 RegisterNumber: 212224230149
 ```
