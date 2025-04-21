@@ -1,10 +1,4 @@
-
 # BOOLEAN_FUNCTION_MINIMIZATION
-```
-Developed by: P MANASA
-
-RegisterNumber: 212224230149
-```
 
 **AIM:**
 
@@ -20,9 +14,9 @@ Hardware – PCs, Cyclone II , USB flasher
 
 **Software – Quartus prime**
 
-**Theory**
-
 **Logic Diagram**
+
+![exp 2](https://github.com/user-attachments/assets/5217c311-ac29-448f-8b6d-12e2bad89a08)
 
 **Procedure**
 
@@ -39,43 +33,38 @@ Hardware – PCs, Cyclone II , USB flasher
 
 **Program:**
 
-Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
-
-```
-module Boolean_min(A,B,C,D,W,X,Y,Z,F1,F2);
-input A,B,C,D,W,X,Y,Z;
-wire x1,x2,x3,x4,x5,x6,x7,x8,x9,x10;
-output F1,F2;
-assign x1=(~A)&(~B)&(~C)&(~D);
-assign x2=(A)&(~C)&(~D);
-assign x3=(~B)&(C)&(~D);
-assign x4=(~A)&(B)&(C)&(D);
-assign x5=(B)&(~C)&(D);
-assign x6=(X)&(~Y)&(Z);
-assign x7=(~X)&(~Y)&(Z);
-assign x8=(~W)&(X)&(Y);
-assign x9=(W)&(~X)&(Y);
-assign x10=(W)&(X)&(Y);
-assign F1=x1|x2|x3|x4|x5;
-assign F2=x6|x7|x8|x9|x10;
+/* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
+Developed by: P Manasa RegisterNumber:  (212224230149)
+~~~
+module exp2a(a,b,c,d,F1);
+intput a,b,c,d;
+output F1;
+assign F1=((~b&~d)|(~a&b&d)|(a&b&~c));
 endmodule
 
-```
-## Logic symbol & Truthtable:
-![image](https://github.com/23004205/BOOLEAN_FUNCTION_MINIMIZATION/assets/138971114/a9ccb75e-db7b-490e-8b69-10f820e6bff4)
-
-![image](https://github.com/23004205/BOOLEAN_FUNCTION_MINIMIZATION/assets/138971114/6835b6c0-9fe5-4f55-8288-53b7d0c42104)
 
 
+module exp2b(w,x,y,z,F2)
+intput w,x,y,z;
+output F2;
+assign F2=((~y&z)|(x&y)|(w&y));
+endmodule
+ ~~~
+ */
 
 
-**RTL realization**
+**RTL realization Output:**
 
-![image](https://github.com/23004205/BOOLEAN_FUNCTION_MINIMIZATION/assets/138971114/5ffd7097-c99c-4ef3-a82d-0108e72a8b9e)
+![Screenshot 2025-04-09 105742](https://github.com/user-attachments/assets/47cdcef2-3066-413a-a7bd-1a43e803e107)
+
+![Screenshot 2025-04-09 110953](https://github.com/user-attachments/assets/363f17d9-044a-43b6-b452-9c27b12b41e9)
 
 
-**Output:**
-![image](https://github.com/23004205/BOOLEAN_FUNCTION_MINIMIZATION/assets/138971114/3294f442-723b-4550-ab9c-49ed60325deb)
+**RTL Timing Diagram:**
+
+![Screenshot 2025-04-09 110314](https://github.com/user-attachments/assets/78a66db3-52cd-4d14-9f5c-a28e2d2081f7)
+
+![Screenshot 2025-04-09 111245](https://github.com/user-attachments/assets/12e7e638-1133-4e9f-ae64-4462f3f1b69e)
 
 **Result:**
 
